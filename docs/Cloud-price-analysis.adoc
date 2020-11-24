@@ -1,0 +1,140 @@
+= Cost Management Forecasting and Optimization: *Cloud Price Analysis*
+:toc: macro
+
+= A solution to integrate AI-Ops into Cost Management
+:toc: macro
+
+_Aakanksha Duggal,  2020-June-4 v0.1.0-dev_
+
+=== Overview
+
+_A brief summary of the project based on initial research and stakeholder meetings. To the best of your abilities, explain at a high level the stakeholders’ desired outcome for the project as well as the potential business value or impact this project will have if successfully completed._
+
+. *Situation and current issues*
+
+Most customers of Red Hat use various cloud services like Azure, AWS and many others for different tasks. These cloud providing companies keep changing their prices time to time. It would be really helpful to the customer to understand how the prices are changing and take appropriate measures to best manage the cost.
+
+It also would be interesting to understand how services are related to each other: identify adjacencies in the SKU list.footnote:[ SKU: Stock Keeping Unit. A unique identifier for a sale unit. It identifies the service (m5.x3large), and the payment terms (on-demand, spot, reserved 1y, reserved 3y).] (i.e m5.xlarge vs m5.2xlarge differ in CPU -2 vs 4- and GiB of memory - 16 vs 32;  EBS vs S3 are different kinds of storage services that overlap use cases)
+
+With the complexity of services and parameters that can vary is really hard to answer questions like the following:
+
+* "Are we deploying the right AWS service for our application?"
+* “Are we using the right technology generation and flavor?”
+* “What is the most effective way to deploy x GiB of data and y cores with a minimum of 6 VM m4.x2large?”
+* “How much would it cost to deploy my 6 m5.x2large VM per month, if my network usage is under 1GiB per month?”
+* “WHat services should be shown together in the current Cost management interface?”
+
+Based on the questions, the problem can be split into the following pieces:
+
+* A topology generator for cloud services. A way to group services and flavors in a way that makes sense to customers, and that is valuable on its own and as a way to configure cost management.
+* An adjacency selector, that allows the customer to identify service, and SKU (inc. its parameters such as technology) that can substitute each other
+* A helper to optimize the configuration for a number of CPU / memory / network /IOPS performance based on consolidated data (i.e. 200 CPU), and minimum data for each instance (i.e. each VM needs at least 32GB)
+* Costs can be managed by Ai-Ops or cost management
+
+. *Key Questions*
+
+. *Basic scenario :* Being able to make sense of the elements in the price list and show them graphically and grouped in different ways.
+  ..    As a result of that, the customer should be able to:
+    ... Find short distance alternatives to service and their prices.footnote:[ https://aws.amazon.com/es/pricing/[https://aws.amazon.com/pricing/]]:
+      .... Change of size (adjacent sizing)
+      .... Change of region
+      .... Change of technology (i.e specific versions of the VM that are optimized for performance, storage, etc) - m5 vs m5n vs m5a.
+      .... Similar services (i.e. database services that are similar)
+    ... Given a bill of materials.footnote:[ BOM (Bill of materials): A bill of materials identifies a list of SKU grouped together for a service or an application. For instance, a typical OpenShift deployment will have different EC2 instances (6+, different for controllers and workers), DNS, loadbalancer, etc)], find the price for it per month (i.e the customer provides a list of VM with minimal sizes and we identify SKU applicable, and calculate the price for it).
+      .... For instance, a customer needs a VM with 6 CPU and 12 GB of memory, with a storage network above 5000 Mbps. The closest one in the AWS price list for m5 is M5.8xlarge, due to the constraints in the storage access, while without that restriction it could be an m5.2xlarge (4x cheaper or distributed into 4x machines),  and could be m5.xlarge if we only take into account the CPU. For GCP and Azure, restrictions could be totally different.
+    ... Do the same visually for the full price list coming from different vendors (it is not necessary to be able to compare between vendors in this phase)
+. *Use based comparison:* Big customers usually have their own price lists, and thus the generic optimization can be misleading. Repeating the results with a customer specific price list would allow the customer to get additional value from the use cases.
+  .. The price list will be a delta on top of the basic use case, where adjacencies are the same, but prices are different and specific to the customer.
+. *Comparison through time:* AWS, Azure and other clouds change the price list every few days. Identifying new additions and changes to the price list would make it easier for a customer to understand what is happening and take actions as a delta of the existing status quota.
+
+. *Hypothesis: Overview of how it could be done*
+
+**
+
+** *//TODO : Need to discuss and finalize.*
+
+*Data Preprocessing and Cleaning:*
+
+* Find unused and unattached resources
+* Identify and consolidate idle resources
+* Analyze the current usage
+* Use graphs(like heatmaps) to identify the usage density
+* Optimize the Reserved Instances/Spot Instances usage
+
+. *Impact*
+
+The completion of this project provides a community tool that can be used to predict the optimal way of managing cost in their hybrid cloud environment.
+
+==== A. Problem Statement:
+
+_In as direct terms as possible, provide the “Data Science” problem statement version of the overview. Think of this as translating the above into a more technical definition._
+
+Given an up to date time series data set of prices for individual cloud compute SKU's, build a Cost-Optimization model that returns the set of cheapest compute SKU's given the users specific constraints and allows the user to make a wise decision on how cloud services should be managed with time. The user should be able to configure the parameters like storage, cpu, etc. This should be automated via argo workflow to run and return the results on a monthly/quarterly basis.
+
+==== B. Checklist for project completion
+
+_Provide a bulleted list of the concrete deliverables and artifacts that, when complete, define the completion of the project._
+
+* _Taxonomy of services in AWS, Azure, GCP_
+  ** _Service group (i.e Compute, Storage, Database)_
+    *** _Service (Amazon EC2, Amazon Lightsail, AWS batch, etc)_
+      **** _SKU parameters (i.e. region, # of CPU, Memory)_
+* _Topology_
+  ** _Services that can substitute other services (RDS vs Aurora)_
+  ** _SKU that can substitute_ *others* _(i.e. m4.xlarge to m5.xlarge, both versions of EC2, m5.xlarge to m5.2xlarge)._
+    *** _OCP recommends m4.xlarge but m5.xlarge has more performance (defined in the price list), and is cheaper_
+* _Topology navigator_
+  ** _Being able to navigate the topology using a topology view_
+* _BOM optimizer_
+  ** _Provide requirements being able to provide alternative BOM_
+    *** _The customer requires 192GiB of memory and 120 CPU for a cluster with at least 16GB per node, minimum of 3 nodes (HA). Provide the optimized solution to the problem_
+* _Time series topology navigator_
+
+_The customer should be able to identify changes in topology with time._
+
+==== C. Provide a solution in terms of human actions to confirm if the task is within the scope of automation through AI.
+
+_To assist in outlining the steps needed to achieve our final goal, outline the AI-less process that we are trying to automate with Machine Learning. Provide as much detail as possible._
+
+_In order to be able to provide this service, the customer needs to study the AWS price list (and repeat the process with other clouds):_
+
+* _Using the AWS CLI:_
+  ** _# aws pricing GetService identifies all AWS Services_
+  ** _# aws pricing GetAttribute identifies the attributes that are part of the service_
+  ** _# aws pricing GetProducts finds SKU with attributes_
+* _The web page provides a taxonomy that it is not available in the CLI (identifies RDS and Lightsail as alternative database services)_
+* _For each deployment, learn the price list to do things like:_
+  ** _Identify when AWS-West-1 is cheaper than AWS-West-2_
+  ** _Find services that are similar (i.e. when deploying a database find what options are really possible with the performance required for the service)_
+  ** _Verify if there is a new version that is better than the current one (i.e. when m5 is launched, the m4 instances become obsolete and more expensive, and the customer needs to identify that the option exist, test if the workloads are supported by the new technology, and create a transition plan)_
+
+==== D. Outline a path to operationalization.
+
+_AI Ops Projects should have an operationalized end point in mind from the onset. Briefly describe how you see the tool produced by this project being used by the end user beyond a jupyter notebook or POC. If possible, be specific and call out the relevant technologies (especially if they are aligned with leveraging existing elements of ODH)_
+
+* *A web page that shows the topology and adjacencies for services (high priority)*
+* *An API that provided an SKU identifies all adjacencies*
+* *Within cost management, the taxonomy will be used to drive the interface (i.e. right now is not possible to identify all database services without manual intervention, once this is working the grouping of service into compute,* database *, storage, networking, will be done automatically using the data provided by this service)*
+
+*The processed price list will be available in cost management so it can be queried via API to provide a cost for a BOM*
+
+=== Resources
+
+==== Data Sets
+
+* Aws cli and API (https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/using-ppslong.html)
+* Price list (public)
+* Pricing web page (https://aws.amazon.com/pricing/)
+
+*____________________________________________________________________________*
+
+=== Weekly Meeting Updates
+
+_Keep track of ongoing meetings below._
+
+==== Year-Month-Day
+
+* Item 1
+* Item 2
+
+**
