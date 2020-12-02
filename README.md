@@ -1,61 +1,8 @@
-project-template
-==============================
+# Cloud Price Analysis
+_Developing AI solutions for Cloud Cost Management by using open data made available by AWS._
 
-template for the team to use
+Most companies nowadays are paying customers of one of the many cloud vendors in the industry, or are planning to be. These cloud providers keep changing their prices from time to time. However, a lack of information about how and when these prices change results in a lot of uncertainty for customers. Being able to understand price changes would help customers take appropriate measures to best manage their costs. Hence, given a dataset of cloud price lists, we aim to build a Cost-Optimization model that allows the user to make the best decision on how cloud services should be managed over time.
 
-Project Organization
-------------
+In order to be able to make intelligent decisions about costs and resources, it is necessary to understand not only the current state of the resources, but also what will be the possible evolution of them. The customer should be capable of understanding the future evolution of the resources and costs if no action is taken, or if some action is taken on the source.
 
-    ├── LICENSE
-    ├── Makefile           <- Makefile with commands like `make data` or `make train`
-    ├── Pipfile            <- Pipfile stating package configuration as used by Pipenv.
-    ├── Pipfile.lock       <- Pipfile.lock stating a pinned down software stack with as used by Pipenv.
-    ├── README.md          <- The top-level README for developers using this project.
-    ├── data
-    │   ├── external       <- Data from third party sources.
-    │   ├── interim        <- Intermediate data that has been transformed.
-    │   ├── processed      <- The final, canonical data sets for modeling.
-    │   └── raw            <- The original, immutable data dump.
-    │
-    ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
-    │
-    ├── models             <- Trained and serialized models, model predictions, or model summaries
-    │
-    ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-    │                         the creator's initials, and a short `-` delimited description, e.g.
-    │                         `1.0-jqp-initial-data-exploration`.
-    │
-    ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-    │
-    ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-    │   └── figures        <- Generated graphics and figures to be used in reporting
-    │
-    ├── requirements.txt   <- The requirements file stating direct dependencies if a library
-    │                         is developed.
-    │
-    ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
-    ├── src                <- Source code for use in this project.
-    │   ├── __init__.py    <- Makes src a Python module
-    │   │
-    │   ├── data           <- Scripts to download or generate data
-    │   │   └── make_dataset.py
-    │   │
-    │   ├── features       <- Scripts to turn raw data into features for modeling
-    │   │   └── build_features.py
-    │   │
-    │   ├── models         <- Scripts to train models and then use trained models to make
-    │   │   │                 predictions
-    │   │   ├── predict_model.py
-    │   │   └── train_model.py
-    │   │
-    │   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-    │       └── visualize.py
-    │
-    ├── .thoth.yaml        <- Thoth's configuration file
-    ├── .aicoe-ci.yaml     <- AICoE CI configuration file (https://github.com/AICoE/aicoe-ci)
-    └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
-
-
---------
-
-<p><small>Project based on the <a target="_blank" href="https://drivendata.github.io/cookiecutter-data-science/">cookiecutter data science project template</a>. #cookiecutterdatascience</small></p>
+In this project,we aim to manage Cloud Costs by using Machine Learning algorithms such as Classification and Linear Regression. Besides choosing the right cloud service and service provider, we aim to **forecast** the upcoming costs and hence be prepared for any overhead and cut on extra costs if things go out of hand. Finally, we aim to optimize cloud usage by finding adjacencies in cloud services to choose the best provider.
