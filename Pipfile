@@ -4,13 +4,16 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+
+[packages]
+awscli = "*"
+pandas = "*"
+python-dotenv = "==0.13.0"
 flake8 = "*"
 coverage = "*"
 Sphinx = "*"
+boto3 = "*"
 
-[packages]
-src = {editable = true, path = "./"}
-awscli = "*"
 
 [requires]
-python_version = "3.8"
+python_version = "3.6"
