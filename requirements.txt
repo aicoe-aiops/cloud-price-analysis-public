@@ -1,0 +1,7 @@
+Sphinx
+awscli
+boto3
+coverage
+flake8
+pandas
+python-dotenv==0.13.0
