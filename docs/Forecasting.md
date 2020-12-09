@@ -12,8 +12,8 @@ _A brief summary of the project based on initial research and stakeholder meetin
 
     The utility of the forecast can vary:
 
-*   Knowing the forecast for the end of the month can help operators to understand if everything remains as expected and take quick action if resources and costs get out of hand.
-*   End of quarter and end of year forecasts can help improve the budgeting  process and provide support for the financial department.
+    *   Knowing the forecast for the end of the month can help operators to understand if everything remains as expected and take quick action if resources and costs get out of hand.
+    *   End of quarter and end of year forecasts can help improve the budgeting  process and provide support for the financial department.
 
     Being able to use the forecast as a basis can improve the capability of cost management to show true costs when BOM rating needs to be done.
 
@@ -27,9 +27,9 @@ _A brief summary of the project based on initial research and stakeholder meetin
 
 4. **Impact:**
 
-*   **Manage Expenses :** Knowing the forecast for the end of the month can help operators to understand if everything remains as expected and take quick action if resources and costs get out of hand.
-*   **Improve Budgeting Process :** End of quarter and end of year forecasts can help improve the budgeting  process and provide support for the financial department.
-*   **Improve Capability of Cost Management :** Being able to use the forecast as a basis can improve the capability of cost management to show true costs when BOM rating needs to be done.
+    *   **Manage Expenses :** Knowing the forecast for the end of the month can help operators to understand if everything remains as expected and take quick action if resources and costs get out of hand.
+    *   **Improve Budgeting Process :** End of quarter and end of year forecasts can help improve the budgeting  process and provide support for the financial department.
+    *   **Improve Capability of Cost Management :** Being able to use the forecast as a basis can improve the capability of cost management to show true costs when BOM rating needs to be done.
 
 ### A. Problem Statement:
 
