@@ -13,6 +13,8 @@ flake8 = "*"
 coverage = "*"
 Sphinx = "*"
 boto3 = "*"
+matplotlib = "*"
+seaborn = "*"
 
 
 [requires]
