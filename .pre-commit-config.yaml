@@ -62,6 +62,6 @@ repos:
     rev: v0.3.1
     hooks:
       - id: flake8-nb
-        additional_dependencies: ['pep8-naming']
+        additional_dependencies: ['pep8-naming', 'packaging']
         # Ignore all format-related checks as Black takes care of those.
         args: ['--ignore', 'E2,W5', '--select', 'E,W,F,N', '--max-line-length=120']
