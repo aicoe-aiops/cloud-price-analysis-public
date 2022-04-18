@@ -10,7 +10,7 @@ from single_instance_calculator import SpotInstanceCalculator
 from FindPrice import GetPriceFromAWS
 
 # from ebs_prices import get_ebs_for_region, get_ebs
-# import json
+import json
 
 
 class SpotCalculator:
@@ -74,30 +74,54 @@ class SpotCalculator:
             #     continue
             # price['volumeType'] = ebs[price['region']]['volumeType']
             # price['storagePrice'] = ebs[price['region']]['price']
-            price["total_price"] = price["spot_price"]
-            price["CPU_Score"] = round(price["Price_per_CPU"], 5)
-            price["Memory_Score"] = round(price["Price_per_memory"], 5)
-            lst.append(price)
+            if isinstance(price["spot_price"], str):
+                price["total_price"] = "N/A"
+                price["CPU_Score"] = "N/A"
+                price["Memory_Score"] = "N/A"
+            else:
+                price["total_price"] = price["spot_price"]
+                price["CPU_Score"] = round(price["Price_per_CPU"], 5)
+                price["Memory_Score"] = round(price["Price_per_memory"], 5)
+                lst.append(price)
         lst = sorted(lst, key=lambda p: p["total_price"])
         return lst[0:30]
 
     ##fleet offers
     def get_fleet_offers(
-        self, os, region, app_size, params, pricing, architecture, type_major
+        self, user_os, region, app_size, params, pricing, architecture, type_major
     ):  ## params- list of all components
         """Get_fleet_offers function."""
-        ec2_data = self.get_ec2_from_cache(region, os)
-        # if os == 'linux':
-        #     file = open('ec2_data_Linux.json')
-        # else:
-        #     file = open('ec2_data_Windows.json')
-        # ec2_data = json.load(file)
+        import os.path
+        import datetime
+
+        if user_os == "linux":
+            if (
+                datetime.datetime.now()
+                - datetime.datetime.fromtimestamp(
+                    os.path.getmtime("ec2_data_Linux.json")
+                )
+            ).days != 0:  ## if the file hasn't modified today
+                ec2_data = self.get_ec2_from_cache(region, user_os)
+            else:
+                file = open("ec2_data_Linux.json")
+                ec2_data = json.load(file)
+        else:
+            if (
+                datetime.datetime.now()
+                - datetime.datetime.fromtimestamp(
+                    os.path.getmtime("ec2_data_Linux.json")
+                )
+            ).days != 0:  ## if the file hasn't modified today
+                ec2_data = self.get_ec2_from_cache(region, user_os)
+            else:
+                file = open("ec2_data_Windows.json")
+                ec2_data = json.load(file)
         print("calculating best configuration")
         ec2 = SpotInstanceCalculator(ec2_data)
         # ebs_data = self.get_ebs_from_cache(region) ## get EBS volumes from AWS
         # ebs = EbsCalculator(ebs_data)
         return get_fleet_offers(
-            params, region, os, app_size, ec2, pricing, architecture, type_major
+            params, region, user_os, app_size, ec2, pricing, architecture, type_major
         )
 
     def is_cached(self, os, region):
@@ -129,18 +153,26 @@ class SpotCalculator:
             ec2 = Ec2Parser()
             if region != "all" and not isinstance(region, list):
                 ec2_data = ec2.get_ec2_for_region(os, region)
-                ec2_data = self.aws_price.calculate_spot_price(ec2_data)
-                # with open('ec2_data.json', 'w', encoding='utf-8') as f:
-                #     json.dump(ec2_data, f, ensure_ascii=False, indent=4)
+                ec2_data = self.aws_price.calculate_spot_price(ec2_data, region)
+                if os == "linux":
+                    with open("ec2_data_Linux.json", "w", encoding="utf-8") as f:
+                        json.dump(ec2_data, f, ensure_ascii=False, indent=4)
+                else:
+                    with open("ec2_data_Windows.json", "w", encoding="utf-8") as f:
+                        json.dump(ec2_data, f, ensure_ascii=False, indent=4)
                 if os not in self.ec2_cache:
                     self.ec2_cache[os] = {}
                 self.ec2_cache[os][region] = ec2_data[region]
                 return ec2_data
             else:
                 ec2_data = ec2.get_ec2(os, region)
-                ec2_data = self.aws_price.calculate_spot_price(ec2_data)
-                # with open('ec2_data.json', 'w', encoding='utf-8') as f:
-                #     json.dump(ec2_data, f, ensure_ascii=False, indent=4)
+                ec2_data = self.aws_price.calculate_spot_price(ec2_data, region)
+                if os == "linux":
+                    with open("ec2_data_Linux.json", "w", encoding="utf-8") as f:
+                        json.dump(ec2_data, f, ensure_ascii=False, indent=4)
+                else:
+                    with open("ec2_data_Windows.json", "w", encoding="utf-8") as f:
+                        json.dump(ec2_data, f, ensure_ascii=False, indent=4)
                 self.ec2_cache[os] = ec2_data
                 self.cached_os[os] = True
                 return ec2_data

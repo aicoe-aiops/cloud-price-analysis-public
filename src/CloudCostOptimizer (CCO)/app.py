@@ -161,7 +161,6 @@ def serialize_component(component: ComponentOffer):
 if __name__ == "__main__":
     app.run()
 
-
 ### POST endpoint to get spot fleet hourly price estimations
 ### body: configuration for fleet, i.e apps,components and other optional configurations
 ###    dto = {
