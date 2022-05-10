@@ -250,8 +250,4 @@ def get_fleet_offers(
         # Coming Soon
 
     res = list(filter(lambda g: g is not None, res))
-    if not res:
-        print("Couldnt find any match")
-    else:
-        print("Optimizer has found you the optimal configuration. check it out")
     return sort_fleet_offers(res)

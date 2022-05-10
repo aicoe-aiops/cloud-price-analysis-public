@@ -26,6 +26,7 @@
                 "spot_price": 0.0538,
                 "Price_per_CPU": 0.006725,
                 "Price_per_memory": 0.00168125,
+                "boto3_spot_price": "N/A",
                 "components": [
                     {
                         "appName": "App2",
@@ -55,6 +56,9 @@
                 "spot_price": 0.0034,
                 "Price_per_CPU": 0.0017,
                 "Price_per_memory": 0.0017,
+                "boto3_AZ": "ap-south-1b",
+                "boto3_ProductDescription": "Linux/UNIX",
+                "boto3_spot_price": 0.0034,
                 "components": [
                     {
                         "appName": "App3",
@@ -84,6 +88,7 @@
                 "spot_price": 0.2218,
                 "Price_per_CPU": 0.0138625,
                 "Price_per_memory": 0.00693125,
+                "boto3_spot_price": "N/A",
                 "components": [
                     {
                         "appName": "App1",
@@ -128,6 +133,7 @@
                 "spot_price": 0.0394,
                 "Price_per_CPU": 0.004925,
                 "Price_per_memory": 0.0024625,
+                "boto3_spot_price": "N/A",
                 "components": [
                     {
                         "appName": "App2",
@@ -157,6 +163,7 @@
                 "spot_price": 0.005,
                 "Price_per_CPU": 0.0025,
                 "Price_per_memory": 0.0025,
+                "boto3_spot_price": "N/A",
                 "components": [
                     {
                         "appName": "App3",
@@ -186,6 +193,7 @@
                 "spot_price": 0.1596,
                 "Price_per_CPU": 0.009975,
                 "Price_per_memory": 0.0049875,
+                "boto3_spot_price": "N/A",
                 "components": [
                     {
                         "appName": "App1",
@@ -230,6 +238,7 @@
                 "spot_price": 0.0671,
                 "Price_per_CPU": 0.0083875,
                 "Price_per_memory": 0.00419375,
+                "boto3_spot_price": "N/A",
                 "components": [
                     {
                         "appName": "App2",
@@ -259,6 +268,7 @@
                 "spot_price": 0.005,
                 "Price_per_CPU": 0.0025,
                 "Price_per_memory": 0.0025,
+                "boto3_spot_price": "N/A",
                 "components": [
                     {
                         "appName": "App3",
@@ -288,6 +298,7 @@
                 "spot_price": 0.2721,
                 "Price_per_CPU": 0.01700625,
                 "Price_per_memory": 0.008503125,
+                "boto3_spot_price": "N/A",
                 "components": [
                     {
                         "appName": "App1",
@@ -332,6 +343,7 @@
                 "spot_price": 0.0667,
                 "Price_per_CPU": 0.0083375,
                 "Price_per_memory": 0.00416875,
+                "boto3_spot_price": "N/A",
                 "components": [
                     {
                         "appName": "App2",
@@ -361,6 +373,7 @@
                 "spot_price": 0.005,
                 "Price_per_CPU": 0.0025,
                 "Price_per_memory": 0.0025,
+                "boto3_spot_price": "N/A",
                 "components": [
                     {
                         "appName": "App3",
@@ -390,6 +403,7 @@
                 "spot_price": 0.2704,
                 "Price_per_CPU": 0.0169,
                 "Price_per_memory": 0.00845,
+                "boto3_spot_price": "N/A",
                 "components": [
                     {
                         "appName": "App1",
@@ -434,6 +448,7 @@
                 "spot_price": 0.0538,
                 "Price_per_CPU": 0.006725,
                 "Price_per_memory": 0.00168125,
+                "boto3_spot_price": "N/A",
                 "components": [
                     {
                         "appName": "App2",
@@ -463,6 +478,9 @@
                 "spot_price": 0.0034,
                 "Price_per_CPU": 0.0017,
                 "Price_per_memory": 0.0017,
+                "boto3_AZ": "ap-south-1b",
+                "boto3_ProductDescription": "Linux/UNIX",
+                "boto3_spot_price": 0.0034,
                 "components": [
                     {
                         "appName": "App3",
@@ -492,6 +510,7 @@
                 "spot_price": 0.2218,
                 "Price_per_CPU": 0.0138625,
                 "Price_per_memory": 0.00693125,
+                "boto3_spot_price": "N/A",
                 "components": [
                     {
                         "appName": "App1",
@@ -525,6 +544,7 @@
                 "spot_price": 0.0269,
                 "Price_per_CPU": 0.006725,
                 "Price_per_memory": 0.00168125,
+                "boto3_spot_price": "N/A",
                 "components": [
                     {
                         "appName": "App1",
@@ -561,6 +581,7 @@
                 "spot_price": 0.0538,
                 "Price_per_CPU": 0.006725,
                 "Price_per_memory": 0.00168125,
+                "boto3_spot_price": "N/A",
                 "components": [
                     {
                         "appName": "App2",
@@ -590,6 +611,9 @@
                 "spot_price": 0.0034,
                 "Price_per_CPU": 0.0017,
                 "Price_per_memory": 0.0017,
+                "boto3_AZ": "ap-south-1b",
+                "boto3_ProductDescription": "Linux/UNIX",
+                "boto3_spot_price": 0.0034,
                 "components": [
                     {
                         "appName": "App3",
@@ -619,6 +643,7 @@
                 "spot_price": 0.0269,
                 "Price_per_CPU": 0.006725,
                 "Price_per_memory": 0.00168125,
+                "boto3_spot_price": "N/A",
                 "components": [
                     {
                         "appName": "App1",
@@ -648,6 +673,7 @@
                 "spot_price": 0.2218,
                 "Price_per_CPU": 0.0138625,
                 "Price_per_memory": 0.00693125,
+                "boto3_spot_price": "N/A",
                 "components": [
                     {
                         "appName": "App1",
@@ -688,6 +714,7 @@
                 "spot_price": 0.0671,
                 "Price_per_CPU": 0.0083875,
                 "Price_per_memory": 0.00419375,
+                "boto3_spot_price": "N/A",
                 "components": [
                     {
                         "appName": "App2",
@@ -717,6 +744,7 @@
                 "spot_price": 0.005,
                 "Price_per_CPU": 0.0025,
                 "Price_per_memory": 0.0025,
+                "boto3_spot_price": "N/A",
                 "components": [
                     {
                         "appName": "App3",
@@ -746,6 +774,7 @@
                 "spot_price": 0.0403,
                 "Price_per_CPU": 0.010075,
                 "Price_per_memory": 0.00251875,
+                "boto3_spot_price": "N/A",
                 "components": [
                     {
                         "appName": "App1",
@@ -775,6 +804,7 @@
                 "spot_price": 0.195,
                 "Price_per_CPU": 0.01625,
                 "Price_per_memory": 0.008125,
+                "boto3_spot_price": "N/A",
                 "components": [
                     {
                         "appName": "App1",
@@ -815,6 +845,7 @@
                 "spot_price": 0.0667,
                 "Price_per_CPU": 0.0083375,
                 "Price_per_memory": 0.00416875,
+                "boto3_spot_price": "N/A",
                 "components": [
                     {
                         "appName": "App2",
@@ -844,6 +875,7 @@
                 "spot_price": 0.005,
                 "Price_per_CPU": 0.0025,
                 "Price_per_memory": 0.0025,
+                "boto3_spot_price": "N/A",
                 "components": [
                     {
                         "appName": "App3",
@@ -873,6 +905,7 @@
                 "spot_price": 0.0403,
                 "Price_per_CPU": 0.010075,
                 "Price_per_memory": 0.00251875,
+                "boto3_spot_price": "N/A",
                 "components": [
                     {
                         "appName": "App1",
@@ -902,6 +935,7 @@
                 "spot_price": 0.195,
                 "Price_per_CPU": 0.01625,
                 "Price_per_memory": 0.008125,
+                "boto3_spot_price": "N/A",
                 "components": [
                     {
                         "appName": "App1",
@@ -942,6 +976,7 @@
                 "spot_price": 0.0671,
                 "Price_per_CPU": 0.0083875,
                 "Price_per_memory": 0.00419375,
+                "boto3_spot_price": "N/A",
                 "components": [
                     {
                         "appName": "App2",
@@ -971,6 +1006,7 @@
                 "spot_price": 0.005,
                 "Price_per_CPU": 0.0025,
                 "Price_per_memory": 0.0025,
+                "boto3_spot_price": "N/A",
                 "components": [
                     {
                         "appName": "App3",
@@ -1000,6 +1036,7 @@
                 "spot_price": 0.195,
                 "Price_per_CPU": 0.01625,
                 "Price_per_memory": 0.008125,
+                "boto3_spot_price": "N/A",
                 "components": [
                     {
                         "appName": "App1",
@@ -1033,6 +1070,7 @@
                 "spot_price": 0.0403,
                 "Price_per_CPU": 0.010075,
                 "Price_per_memory": 0.00251875,
+                "boto3_spot_price": "N/A",
                 "components": [
                     {
                         "appName": "App1",
@@ -1069,6 +1107,7 @@
                 "spot_price": 0.0667,
                 "Price_per_CPU": 0.0083375,
                 "Price_per_memory": 0.00416875,
+                "boto3_spot_price": "N/A",
                 "components": [
                     {
                         "appName": "App2",
@@ -1098,6 +1137,7 @@
                 "spot_price": 0.005,
                 "Price_per_CPU": 0.0025,
                 "Price_per_memory": 0.0025,
+                "boto3_spot_price": "N/A",
                 "components": [
                     {
                         "appName": "App3",
@@ -1127,6 +1167,7 @@
                 "spot_price": 0.195,
                 "Price_per_CPU": 0.01625,
                 "Price_per_memory": 0.008125,
+                "boto3_spot_price": "N/A",
                 "components": [
                     {
                         "appName": "App1",
@@ -1160,6 +1201,7 @@
                 "spot_price": 0.0403,
                 "Price_per_CPU": 0.010075,
                 "Price_per_memory": 0.00251875,
+                "boto3_spot_price": "N/A",
                 "components": [
                     {
                         "appName": "App1",

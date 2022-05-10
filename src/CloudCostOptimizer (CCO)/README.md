@@ -1,3 +1,7 @@
+THE PROJECT HAS BEEN MOVED - This project is still under development, but it has been moved to another repository:
+
+https://github.com/aicoe-aiops/cloud-price-analysis-public/tree/master/src/CloudCostOptimizer%20(CCO)
+
 # Cloud Cost Optimizer
 The goal of the project is to provide the user an api for getting [AWS spot instances](https://aws.amazon.com/ec2/spot/) (or on-demand) best offers based on a given configuration.
 The Optimizer first gets from the user application(s) requirements such as OS, region, cpu, memory, storage, network, etc..
@@ -16,13 +20,13 @@ git clone https://github.com/AdiY10/CloudCostOptimizer.git
 ```
 $ python -m pip install requests
 $ pip3 install urllib3
-$ pip3 install pandas
 $ pip install grequests
+$ pip3 install pandas
 ```
 
 ### Usage
 ```
-$ python Fleet_Optimizer.py
+$ python3 Fleet_Optimizer.py
 ```
 Where the following command activate the Optimizer
 
@@ -35,6 +39,7 @@ The user's workload should be in the **input_fleet.json** file- **don't forget t
     "selectedOs": "linux",
     "region": ["eu-south-1", "eu-west-3", "us-east-2","us-east-1"],
     "spot/onDemand": "spot",
+    "filterInstances": ["i3","t3a","c5a.xlarge"],
     "AvailabilityZone": "all",
     "Architecture": "all",
     "apps": [
@@ -108,6 +113,7 @@ has different resource requirements, which describes by the memory, vCPUs etc...
   * region defined as specific region, for example "us-east-2"- to look for the best configuration only in us-east-2
   * region defined as list of multiple regions- ["eu-west-1","eu-east-2","sa-east-1"]- to look for the best configuration in these regions
 * AvailabilityZone - used if specific AZ is required
+* filterInstances - used if specific instance types (major, minor or instance type) should not be displayed by Optimizer- for example, if major type a1, and instance type c5.large are not relevant, insert- filterInstances: ["a1","c5.large"]
 * Architecture - processor architecture, can be selected as- 'all' / 'x86_64' (64-bit x86) / 'arm64' (64-bit arm) / 'i386' (32-bit) / 'x86_64_mac' (64-bit mac)
 * typeMajor - Used when specific instance types are required. For example, when only C5, R5, A1 are supported- insert "typeMajor": ["c5", "r5", "a1"]
 * Category - specifies the instance category- General Purpose, Compute Optimized, Memory Optimized, Media Accelerator Instance, Storage Optimized, GPU instance.
@@ -116,7 +122,8 @@ has different resource requirements, which describes by the memory, vCPUs etc...
 * Network - required network capacity
 * IOPS (MiB I/O) - max IOPS per volume.
 * Throughput (MiB/s)- max throughput per volume.
-
+#### Configuration file:
+A configuration file with advanced settings is provided to the user, which allows him to edit default settings according to his preferences, such as data extraction methodology, boto3 usage parameters, search algorithm parameters, etc..
 ## Results
 The output of the Optimizer is a json file containing  a list of configurations. Each configuration represents an assignment of all application components to AWS instances.
 
