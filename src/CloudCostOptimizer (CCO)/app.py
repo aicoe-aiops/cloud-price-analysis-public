@@ -3,12 +3,12 @@
 from flask import Flask, jsonify, request
 import json
 from flask_cors import CORS, cross_origin
-from gevent import monkey
 from fleet_classes import Offer, ComponentOffer
 from fleet_offers import Component
 from get_spot import SpotCalculator
 
-monkey.patch_all()  ##internal use- Prevent an Error "greenlet.error: cannot switch to a different thread"
+# from gevent import monkey
+# monkey.patch_all()  ##internal use- Prevent an Error "greenlet.error: cannot switch to a different thread"
 
 calc = SpotCalculator()
 app = Flask(__name__)
@@ -42,7 +42,7 @@ def get_spot_prices():
         # os = input['os']
         # v_cpus = input['v_cpus']
         os = filter["selectedOs"]
-        v_cpus = float(filter["v_cpus"])
+        v_cpus = float(filter["vCPUs"])
         memory = float(filter["memory"])
         storage_size = float(filter["size"]) if "size" in filter else 0
         region = filter["selectedRegion"] if "selectedRegion" in filter else "all"
