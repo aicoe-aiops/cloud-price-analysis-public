@@ -2,6 +2,7 @@
 
 from fleet_classes import Offer
 
+
 def partition2(collection, region):
     """Partition2 function."""
     if not collection:
