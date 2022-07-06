@@ -17,7 +17,6 @@ git clone https://github.com/AdiY10/CloudCostOptimizer.git
 $ python -m pip install requests
 $ pip3 install urllib3
 $ pip install grequests
-$ pip3 install pandas
 ```
 
 ### Usage
