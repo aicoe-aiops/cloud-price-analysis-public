@@ -1,7 +1,3 @@
-THE PROJECT HAS BEEN MOVED - This project is still under development, but it has been moved to another repository:
-
-https://github.com/aicoe-aiops/cloud-price-analysis-public/tree/master/src/CloudCostOptimizer%20(CCO)
-
 # Cloud Cost Optimizer
 The goal of the project is to provide the user an api for getting [AWS spot instances](https://aws.amazon.com/ec2/spot/) (or on-demand) best offers based on a given configuration.
 The Optimizer first gets from the user application(s) requirements such as OS, region, cpu, memory, storage, network, etc..
@@ -123,7 +119,7 @@ has different resource requirements, which describes by the memory, vCPUs etc...
 * IOPS (MiB I/O) - max IOPS per volume.
 * Throughput (MiB/s)- max throughput per volume.
 #### Configuration file:
-A configuration file with advanced settings is provided to the user, which allows him to edit default settings according to his preferences, such as data extraction methodology, boto3 usage parameters, search algorithm parameters, etc..
+A configuration file with advanced settings is provided to the user, which allows him to edit default settings according to his preferences, such as data extraction methodology, cloud provider, boto3 usage parameters, search algorithm parameters, etc..
 ## Results
 The output of the Optimizer is a json file containing  a list of configurations. Each configuration represents an assignment of all application components to AWS instances.
 
