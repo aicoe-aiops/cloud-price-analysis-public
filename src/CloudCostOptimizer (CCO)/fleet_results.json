@@ -1,0 +1,85 @@
+[
+    {
+        "price": 0.7502,
+        "EC2 Type": "onDemand",
+        "region": "hybrid",
+        "instances": [
+            {
+                "typeName": "D8a v4",
+                "cpu": 8,
+                "memory": 32,
+                "storage": 200,
+                "region": "Central India",
+                "os": "CentOS or Ubuntu Linux",
+                "family": "General purpose",
+                "onDemandPrice": 0.246,
+                "spot_price": 0.0246,
+                "discount": 0,
+                "CloudProvider": "Azure",
+                "components": [
+                    {
+                        "appName": "App2",
+                        "componentName": "Comp3"
+                    }
+                ]
+            },
+            {
+                "onDemandPrice": 0.0112,
+                "region": "ap-south-1",
+                "cpu": "2",
+                "ebsOnly": true,
+                "family": "General purpose",
+                "memory": "2",
+                "network": "Up to 5 Gigabit",
+                "os": "Linux",
+                "typeMajor": "t4g",
+                "typeMinor": "small",
+                "storage": "EBS only",
+                "typeName": "t4g.small",
+                "physicalProcessor": "AWS Graviton2 Processor",
+                "processorArchitecture": "64-bit",
+                "Architecture": "arm64",
+                "discount": 0,
+                "CloudProvider": "AWS",
+                "interruption_frequency": "<5%",
+                "interruption_frequency_filter": 0.0,
+                "spot_price": 0.0034,
+                "Price_per_CPU": 0.0017,
+                "Price_per_memory": 0.0017,
+                "components": [
+                    {
+                        "appName": "App3",
+                        "componentName": "Comp4"
+                    }
+                ]
+            },
+            {
+                "typeName": "D16a v4",
+                "cpu": 16,
+                "memory": 64,
+                "storage": 400,
+                "region": "Central India",
+                "os": "CentOS or Ubuntu Linux",
+                "family": "General purpose",
+                "onDemandPrice": 0.493,
+                "spot_price": 0.0493,
+                "discount": 0,
+                "CloudProvider": "Azure",
+                "components": [
+                    {
+                        "appName": "App1",
+                        "componentName": "Comp1"
+                    },
+                    {
+                        "appName": "App1",
+                        "componentName": "comp2"
+                    },
+                    {
+                        "appName": "App1",
+                        "componentName": "comp5"
+                    }
+                ]
+            }
+        ]
+    }
+]

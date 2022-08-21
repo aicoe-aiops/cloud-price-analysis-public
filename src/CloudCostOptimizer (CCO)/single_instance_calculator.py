@@ -21,32 +21,15 @@ class SpotInstanceCalculator:
         self.ec2 = ec2
         # self.client = boto3.client('ec2')
 
-    def get_spot_estimations_allregions(
-        self,
-        v_cpus,
-        memory,
-        architecture,
-        region="all",
-        type="all",
-        behavior="terminate",
-        frequency=4,
-        network=0,
-        burstable=True,
-    ):
-        """Get_spot_estimations_allregions function."""
-        ec2 = self.get_spot_filter(
-            v_cpus, memory, region, type, behavior, frequency, network, burstable
-        )
-        return sorted(ec2, key=lambda p: p["spot_price"])
-
     def get_spot_estimations(
         self,
         v_cpus,
         memory,
         architecture,
         type_major,
-        region="all",
-        type="all",
+        provider,
+        region,
+        type,
         behavior="terminate",
         frequency=4,
         network=0,
@@ -58,6 +41,7 @@ class SpotInstanceCalculator:
             memory,
             architecture,
             type_major,
+            provider,
             region,
             type,
             behavior,
@@ -68,7 +52,7 @@ class SpotInstanceCalculator:
         # lst = []
         # for price in ec2:
         #     lst.append(price)
-        return sorted(ec2, key=lambda p: p["spot_price"])
+        return sorted(ec2, key=lambda p: float(p["spot_price"]))
 
     def advanced_filter(self, fi, v_cpus):
         """Advanced_filter function."""
@@ -90,6 +74,7 @@ class SpotInstanceCalculator:
         memory,
         architecture,
         type_major,
+        aws_provider,
         region="all",
         type="all",
         behavior="terminate",
@@ -105,23 +90,32 @@ class SpotInstanceCalculator:
                 result.extend(v)
         else:
             result.extend(ec2_data[region])
-        fi = filter(
-            lambda price: float(price["cpu"]) >= v_cpus
-            and float(price["memory"]) >= memory
-            and price["interruption_frequency_filter"] <= frequency,
-            result,
-        )
-        if architecture != "all":
-            fi = filter(lambda price: price["architecture"] in (architecture), result)
-        if type_major != "all":
-            fi = filter(lambda price: price["type_major"] in (type_major), result)
-        fi = filter(self.network_filter(network, burstable), fi)
-        fi = filter(self.interruption_filter(behavior), fi)
-        fi = filter(set_string_filter(type, "family"), fi)
-        # self.botoFilter([a_dict['typeName'] for a_dict in list(fi)])
-        fi = list(fi)
-        # fi = self.advanced_filter(fi,v_cpus)
-        # print('after filtering',len(fi))
+        if aws_provider == "AWS":
+            fi = filter(
+                lambda price: float(price["cpu"]) >= v_cpus
+                and float(price["memory"]) >= memory
+                and price["interruption_frequency_filter"] <= frequency,
+                result,
+            )
+            if architecture != "all":
+                fi = filter(
+                    lambda price: price["architecture"] in (architecture), result
+                )
+            if type_major != "all":
+                fi = filter(lambda price: price["typeMajor"] in (type_major), result)
+            fi = filter(self.network_filter(network, burstable), fi)
+            fi = filter(self.interruption_filter(behavior), fi)
+            fi = filter(set_string_filter(type, "family"), fi)
+            # self.botoFilter([a_dict['typeName'] for a_dict in list(fi)])
+            fi = list(fi)
+            # fi = self.advanced_filter(fi,v_cpus)
+            # print('after filtering',len(fi))
+        else:
+            fi = filter(
+                lambda price: float(price["cpu"]) >= v_cpus
+                and float(price["memory"]) >= memory,
+                result,
+            )
         return fi
 
     def network_filter(self, network, burstable):
@@ -150,7 +144,7 @@ class SpotInstanceCalculator:
             return lambda x: True
         if behavior == "hibernate":
             return (
-                lambda x: x["type_major"] in ["c3", "c4", "c4", "m4", "m5", "r4", "r4"]
+                lambda x: x["typeMajor"] in ["c3", "c4", "c4", "m4", "m5", "r4", "r4"]
                 and float(x["memory"]) <= 100
             )
         return lambda x: False
