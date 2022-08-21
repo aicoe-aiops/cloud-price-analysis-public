@@ -14,6 +14,8 @@ class Component(object):
         self.network = (
             float(component_specs["network"]) if "network" in component_specs else 0.0
         )
+        self.affinity = self.affinity_list(component_specs)
+        self.anti_affinity = self.anti_affinity_list(component_specs)
         self.behavior = (
             component_specs["behavior"]
             if "behavior" in component_specs
@@ -57,6 +59,28 @@ class Component(object):
     def get_component_name(self):
         """Get Component name function."""
         return self.component_name
+
+    def affinity_list(self, component_specs):
+        """Create list of pairs that must be paired together (affinity)."""
+        afl = (
+            component_specs["affinity"].split(",")
+            if "affinity" in component_specs
+            else None
+        )
+        afl.append(component_specs["name"]) if afl is not None else None
+        return afl
+
+    def anti_affinity_list(self, component_specs):
+        """Create list of pairs that must not be paired together (anti-affinity)."""
+        if "antiaffinity" in component_specs:
+            component_specs["anti-affinity"] = component_specs.pop("antiaffinity")
+        afl = (
+            component_specs["anti-affinity"].split(",")
+            if "anti-affinity" in component_specs
+            else None
+        )
+        afl.append(component_specs["name"]) if afl is not None else None
+        return afl
 
 
 class GroupedParam(object):
@@ -113,18 +137,23 @@ class GroupedInstance(object):
 
     def __init__(self, instance, components, pricing):
         """Initialize class."""
-        self.spot_price = round(instance["spot_price"], 5)
+        self.spot_price = (
+            round(float(instance["spot_price"]), 5)
+            if isinstance(instance["spot_price"], float)
+            else 100000
+        )
+        self.discount = instance["discount"]
         self.components = components
         self.instance = instance
         # self.region = instance['region'] ##cross region option
-        self.onDemand = round(instance["onDemandPrice"], 5)
+        self.onDemand = round(float(instance["onDemandPrice"]), 5)
         if pricing == "spot":
-            self.total_price = (
-                self.spot_price
+            self.total_price = self.spot_price * (
+                1 - (self.discount) / 100
             )  ##+ sum(map(lambda c: c.storage_price,components)) in case EBS should be calculated
         else:
-            self.total_price = (
-                self.onDemand
+            self.total_price = self.onDemand * (
+                1 - (self.discount) / 100
             )  ##+ sum(map(lambda c: c.storage_price,components)) in case EBS should be calculated
 
     def get_info(self):
