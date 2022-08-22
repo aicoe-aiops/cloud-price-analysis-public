@@ -1,0 +1,72 @@
+{
+    "selectedOs": "linux",
+    "region": "all",
+    "spot/onDemand": "onDemand",
+    "AvailabilityZone": "all",
+    "Architecture": "all",
+    "typeMajor": ["c5","r5","m5","a1","c4","m5a","t3","t4"],
+    "apps": [
+        {
+            "app": "App1",
+            "share": true,
+            "components": [
+                {
+                    "memory": 8,
+                    "vCPUs": 8,
+                    "network": 5,
+                    "behavior": "terminate",
+                    "frequency": "2",
+                    "storageType": null,
+                    "name": "Comp1"
+                },
+                {
+                    "memory": 8,
+                    "vCPUs": 3,
+                    "network": 0,
+                    "behavior": "hibernate",
+                    "frequency": "3",
+                    "storageType": null,
+                    "burstable": true,
+                    "name": "comp2"
+                },
+                                {
+                    "memory": 8,
+                    "vCPUs": 3,
+                    "network": 0,
+                    "behavior": "hibernate",
+                    "frequency": "3",
+                    "storageType": null,
+                    "burstable": true,
+                    "name": "comp5"
+                }
+            ]
+        },
+        {
+            "app": "App2",
+            "share": false,
+            "components": [
+                {
+                    "memory": 10,
+                    "vCPUs": 5,
+                    "network": 0,
+                    "behavior": "stop",
+                    "frequency": "4",
+                    "storageType": null,
+                    "burstable": true,
+                    "name": "Comp3"
+                }
+            ]
+        },
+        {
+            "app": "App3",
+            "share": false,
+            "components": [
+                {
+                    "memory": 2,
+                    "vCPUs": 2,
+                    "name": "Comp4"
+                }
+            ]
+        }
+    ]
+}
