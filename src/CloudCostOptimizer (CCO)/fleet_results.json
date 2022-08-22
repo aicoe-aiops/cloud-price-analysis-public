@@ -1,9 +1,38 @@
 [
     {
-        "price": 0.7632,
+        "price": 0.8824,
         "EC2 Type": "onDemand",
         "region": "ap-south-1",
         "instances": [
+            {
+                "onDemandPrice": 0.1792,
+                "region": "ap-south-1",
+                "cpu": "8",
+                "ebsOnly": true,
+                "family": "General purpose",
+                "memory": "32",
+                "network": "Up to 5 Gigabit",
+                "os": "Linux",
+                "typeMajor": "t4g",
+                "typeMinor": "2xlarge",
+                "storage": "EBS only",
+                "typeName": "t4g.2xlarge",
+                "physicalProcessor": "AWS Graviton2 Processor",
+                "processorArchitecture": "64-bit",
+                "Architecture": "arm64",
+                "discount": 70,
+                "interruption_frequency": "<5%",
+                "interruption_frequency_filter": 0.0,
+                "spot_price": 0.0538,
+                "Price_per_CPU": 0.006725,
+                "Price_per_memory": 0.00168125,
+                "components": [
+                    {
+                        "appName": "App2",
+                        "componentName": "Comp3"
+                    }
+                ]
+            },
             {
                 "onDemandPrice": 0.0112,
                 "region": "ap-south-1",
@@ -20,8 +49,7 @@
                 "physicalProcessor": "AWS Graviton2 Processor",
                 "processorArchitecture": "64-bit",
                 "Architecture": "arm64",
-                "discount": 0,
-                "CloudProvider": "AWS",
+                "discount": 70,
                 "interruption_frequency": "<5%",
                 "interruption_frequency_filter": 0.0,
                 "spot_price": 0.0034,
@@ -35,117 +63,8 @@
                 ]
             },
             {
-                "onDemandPrice": 0.752,
+                "onDemandPrice": 0.692,
                 "region": "ap-south-1",
-                "cpu": "32",
-                "ebsOnly": true,
-                "family": "Compute optimized",
-                "memory": "64",
-                "network": "10 Gigabit",
-                "os": "Linux",
-                "typeMajor": "c5a",
-                "typeMinor": "8xlarge",
-                "storage": "EBS only",
-                "typeName": "c5a.8xlarge",
-                "physicalProcessor": "AMD EPYC 7R32",
-                "processorArchitecture": "32-bit or 64-bit",
-                "Architecture": "x86_64",
-                "discount": 0,
-                "CloudProvider": "AWS",
-                "interruption_frequency": "10%-15%",
-                "interruption_frequency_filter": 2.0,
-                "spot_price": 0.4328,
-                "Price_per_CPU": 0.013525,
-                "Price_per_memory": 0.0067625,
-                "components": [
-                    {
-                        "appName": "App1",
-                        "componentName": "Comp1"
-                    },
-                    {
-                        "appName": "App1",
-                        "componentName": "comp2"
-                    },
-                    {
-                        "appName": "App1",
-                        "componentName": "comp5"
-                    },
-                    {
-                        "appName": "App2",
-                        "componentName": "Comp3"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "price": 0.8424,
-        "EC2 Type": "onDemand",
-        "region": "us-east-1",
-        "instances": [
-            {
-                "onDemandPrice": 0.0168,
-                "region": "us-east-1",
-                "cpu": "2",
-                "ebsOnly": true,
-                "family": "General purpose",
-                "memory": "2",
-                "network": "Up to 5 Gigabit",
-                "os": "Linux",
-                "typeMajor": "t4g",
-                "typeMinor": "small",
-                "storage": "EBS only",
-                "typeName": "t4g.small",
-                "physicalProcessor": "AWS Graviton2 Processor",
-                "processorArchitecture": "64-bit",
-                "Architecture": "arm64",
-                "discount": 0,
-                "CloudProvider": "AWS",
-                "interruption_frequency": "<5%",
-                "interruption_frequency_filter": 0.0,
-                "spot_price": 0.005,
-                "Price_per_CPU": 0.0025,
-                "Price_per_memory": 0.0025,
-                "components": [
-                    {
-                        "appName": "App3",
-                        "componentName": "Comp4"
-                    }
-                ]
-            },
-            {
-                "onDemandPrice": 0.1344,
-                "region": "us-east-1",
-                "cpu": "4",
-                "ebsOnly": true,
-                "family": "General purpose",
-                "memory": "16",
-                "network": "Up to 5 Gigabit",
-                "os": "Linux",
-                "typeMajor": "t4g",
-                "typeMinor": "xlarge",
-                "storage": "EBS only",
-                "typeName": "t4g.xlarge",
-                "physicalProcessor": "AWS Graviton2 Processor",
-                "processorArchitecture": "64-bit",
-                "Architecture": "arm64",
-                "discount": 0,
-                "CloudProvider": "AWS",
-                "interruption_frequency": "<5%",
-                "interruption_frequency_filter": 0.0,
-                "spot_price": 0.0403,
-                "Price_per_CPU": 0.010075,
-                "Price_per_memory": 0.00251875,
-                "components": [
-                    {
-                        "appName": "App1",
-                        "componentName": "comp5"
-                    }
-                ]
-            },
-            {
-                "onDemandPrice": 0.6912,
-                "region": "us-east-1",
                 "cpu": "16",
                 "ebsOnly": true,
                 "family": "Compute optimized",
@@ -159,13 +78,12 @@
                 "physicalProcessor": "AWS Graviton2 Processor",
                 "processorArchitecture": "64-bit",
                 "Architecture": "x86_64",
-                "discount": 0,
-                "CloudProvider": "AWS",
-                "interruption_frequency": "<5%",
-                "interruption_frequency_filter": 0.0,
-                "spot_price": 0.2721,
-                "Price_per_CPU": 0.01700625,
-                "Price_per_memory": 0.008503125,
+                "discount": 68,
+                "interruption_frequency": "5%-10%",
+                "interruption_frequency_filter": 1.0,
+                "spot_price": 0.2218,
+                "Price_per_CPU": 0.0138625,
+                "Price_per_memory": 0.00693125,
                 "components": [
                     {
                         "appName": "App1",
@@ -175,111 +93,6 @@
                         "appName": "App1",
                         "componentName": "comp2"
                     },
-                    {
-                        "appName": "App2",
-                        "componentName": "Comp3"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "price": 0.8424,
-        "EC2 Type": "onDemand",
-        "region": "us-west-2",
-        "instances": [
-            {
-                "onDemandPrice": 0.0168,
-                "region": "us-west-2",
-                "cpu": "2",
-                "ebsOnly": true,
-                "family": "General purpose",
-                "memory": "2",
-                "network": "Up to 5 Gigabit",
-                "os": "Linux",
-                "typeMajor": "t4g",
-                "typeMinor": "small",
-                "storage": "EBS only",
-                "typeName": "t4g.small",
-                "physicalProcessor": "AWS Graviton2 Processor",
-                "processorArchitecture": "64-bit",
-                "Architecture": "arm64",
-                "discount": 0,
-                "CloudProvider": "AWS",
-                "interruption_frequency": "<5%",
-                "interruption_frequency_filter": 0.0,
-                "spot_price": 0.005,
-                "Price_per_CPU": 0.0025,
-                "Price_per_memory": 0.0025,
-                "components": [
-                    {
-                        "appName": "App3",
-                        "componentName": "Comp4"
-                    }
-                ]
-            },
-            {
-                "onDemandPrice": 0.6912,
-                "region": "us-west-2",
-                "cpu": "16",
-                "ebsOnly": true,
-                "family": "Compute optimized",
-                "memory": "32",
-                "network": "25 Gigabit",
-                "os": "Linux",
-                "typeMajor": "c6gn",
-                "typeMinor": "4xlarge",
-                "storage": "EBS only",
-                "typeName": "c6gn.4xlarge",
-                "physicalProcessor": "AWS Graviton2 Processor",
-                "processorArchitecture": "64-bit",
-                "Architecture": "x86_64",
-                "discount": 0,
-                "CloudProvider": "AWS",
-                "interruption_frequency": "10%-15%",
-                "interruption_frequency_filter": 2.0,
-                "spot_price": 0.2704,
-                "Price_per_CPU": 0.0169,
-                "Price_per_memory": 0.00845,
-                "components": [
-                    {
-                        "appName": "App1",
-                        "componentName": "Comp1"
-                    },
-                    {
-                        "appName": "App1",
-                        "componentName": "comp2"
-                    },
-                    {
-                        "appName": "App2",
-                        "componentName": "Comp3"
-                    }
-                ]
-            },
-            {
-                "onDemandPrice": 0.1344,
-                "region": "us-west-2",
-                "cpu": "4",
-                "ebsOnly": true,
-                "family": "General purpose",
-                "memory": "16",
-                "network": "Up to 5 Gigabit",
-                "os": "Linux",
-                "typeMajor": "t4g",
-                "typeMinor": "xlarge",
-                "storage": "EBS only",
-                "typeName": "t4g.xlarge",
-                "physicalProcessor": "AWS Graviton2 Processor",
-                "processorArchitecture": "64-bit",
-                "Architecture": "arm64",
-                "discount": 0,
-                "CloudProvider": "AWS",
-                "interruption_frequency": "<5%",
-                "interruption_frequency_filter": 0.0,
-                "spot_price": 0.0403,
-                "Price_per_CPU": 0.010075,
-                "Price_per_memory": 0.00251875,
-                "components": [
                     {
                         "appName": "App1",
                         "componentName": "comp5"
@@ -289,11 +102,40 @@
         ]
     },
     {
-        "price": 0.862,
+        "price": 0.912,
         "EC2 Type": "onDemand",
         "region": "us-east-2",
         "instances": [
             {
+                "onDemandPrice": 0.204,
+                "region": "us-east-2",
+                "cpu": "8",
+                "ebsOnly": true,
+                "family": "General purpose",
+                "memory": "16",
+                "network": "Up to 10 Gigabit",
+                "os": "Linux",
+                "typeMajor": "a1",
+                "typeMinor": "2xlarge",
+                "storage": "EBS only",
+                "typeName": "a1.2xlarge",
+                "physicalProcessor": "AWS Graviton Processor",
+                "processorArchitecture": "64-bit",
+                "Architecture": "arm64",
+                "discount": 81,
+                "interruption_frequency": "<20%",
+                "interruption_frequency_filter": 4.0,
+                "spot_price": 0.0394,
+                "Price_per_CPU": 0.004925,
+                "Price_per_memory": 0.0024625,
+                "components": [
+                    {
+                        "appName": "App2",
+                        "componentName": "Comp3"
+                    }
+                ]
+            },
+            {
                 "onDemandPrice": 0.0168,
                 "region": "us-east-2",
                 "cpu": "2",
@@ -309,8 +151,7 @@
                 "physicalProcessor": "AWS Graviton2 Processor",
                 "processorArchitecture": "64-bit",
                 "Architecture": "arm64",
-                "discount": 0,
-                "CloudProvider": "AWS",
+                "discount": 70,
                 "interruption_frequency": "<5%",
                 "interruption_frequency_filter": 0.0,
                 "spot_price": 0.005,
@@ -320,36 +161,6 @@
                     {
                         "appName": "App3",
                         "componentName": "Comp4"
-                    }
-                ]
-            },
-            {
-                "onDemandPrice": 0.154,
-                "region": "us-east-2",
-                "cpu": "4",
-                "ebsOnly": true,
-                "family": "Compute optimized",
-                "memory": "8",
-                "network": "Up to 10 Gigabit",
-                "os": "Linux",
-                "typeMajor": "c5a",
-                "typeMinor": "xlarge",
-                "storage": "EBS only",
-                "typeName": "c5a.xlarge",
-                "physicalProcessor": "AMD EPYC 7R32",
-                "processorArchitecture": "32-bit or 64-bit",
-                "Architecture": "x86_64",
-                "discount": 0,
-                "CloudProvider": "AWS",
-                "interruption_frequency": "<5%",
-                "interruption_frequency_filter": 0.0,
-                "spot_price": 0.038,
-                "Price_per_CPU": 0.0095,
-                "Price_per_memory": 0.00475,
-                "components": [
-                    {
-                        "appName": "App1",
-                        "componentName": "comp5"
                     }
                 ]
             },
@@ -369,8 +180,7 @@
                 "physicalProcessor": "AWS Graviton2 Processor",
                 "processorArchitecture": "64-bit",
                 "Architecture": "x86_64",
-                "discount": 0,
-                "CloudProvider": "AWS",
+                "discount": 77,
                 "interruption_frequency": "<5%",
                 "interruption_frequency_filter": 0.0,
                 "spot_price": 0.1596,
@@ -386,21 +196,50 @@
                         "componentName": "comp2"
                     },
                     {
-                        "appName": "App2",
-                        "componentName": "Comp3"
+                        "appName": "App1",
+                        "componentName": "comp5"
                     }
                 ]
             }
         ]
     },
     {
-        "price": 0.8988,
+        "price": 0.912,
         "EC2 Type": "onDemand",
-        "region": "eu-north-1",
+        "region": "us-east-1",
         "instances": [
             {
-                "onDemandPrice": 0.0172,
-                "region": "eu-north-1",
+                "onDemandPrice": 0.204,
+                "region": "us-east-1",
+                "cpu": "8",
+                "ebsOnly": true,
+                "family": "General purpose",
+                "memory": "16",
+                "network": "Up to 10 Gigabit",
+                "os": "Linux",
+                "typeMajor": "a1",
+                "typeMinor": "2xlarge",
+                "storage": "EBS only",
+                "typeName": "a1.2xlarge",
+                "physicalProcessor": "AWS Graviton Processor",
+                "processorArchitecture": "64-bit",
+                "Architecture": "arm64",
+                "discount": 67,
+                "interruption_frequency": "<20%",
+                "interruption_frequency_filter": 4.0,
+                "spot_price": 0.0671,
+                "Price_per_CPU": 0.0083875,
+                "Price_per_memory": 0.00419375,
+                "components": [
+                    {
+                        "appName": "App2",
+                        "componentName": "Comp3"
+                    }
+                ]
+            },
+            {
+                "onDemandPrice": 0.0168,
+                "region": "us-east-1",
                 "cpu": "2",
                 "ebsOnly": true,
                 "family": "General purpose",
@@ -414,13 +253,12 @@
                 "physicalProcessor": "AWS Graviton2 Processor",
                 "processorArchitecture": "64-bit",
                 "Architecture": "arm64",
-                "discount": 0,
-                "CloudProvider": "AWS",
-                "interruption_frequency": "5%-10%",
-                "interruption_frequency_filter": 1.0,
-                "spot_price": 0.0052,
-                "Price_per_CPU": 0.0026,
-                "Price_per_memory": 0.0026,
+                "discount": 70,
+                "interruption_frequency": "<5%",
+                "interruption_frequency_filter": 0.0,
+                "spot_price": 0.005,
+                "Price_per_CPU": 0.0025,
+                "Price_per_memory": 0.0025,
                 "components": [
                     {
                         "appName": "App3",
@@ -429,8 +267,8 @@
                 ]
             },
             {
-                "onDemandPrice": 0.744,
-                "region": "eu-north-1",
+                "onDemandPrice": 0.6912,
+                "region": "us-east-1",
                 "cpu": "16",
                 "ebsOnly": true,
                 "family": "Compute optimized",
@@ -444,13 +282,12 @@
                 "physicalProcessor": "AWS Graviton2 Processor",
                 "processorArchitecture": "64-bit",
                 "Architecture": "x86_64",
-                "discount": 0,
-                "CloudProvider": "AWS",
-                "interruption_frequency": "5%-10%",
-                "interruption_frequency_filter": 1.0,
-                "spot_price": 0.2293,
-                "Price_per_CPU": 0.01433125,
-                "Price_per_memory": 0.007165625,
+                "discount": 61,
+                "interruption_frequency": "<5%",
+                "interruption_frequency_filter": 0.0,
+                "spot_price": 0.2721,
+                "Price_per_CPU": 0.01700625,
+                "Price_per_memory": 0.008503125,
                 "components": [
                     {
                         "appName": "App1",
@@ -461,36 +298,6 @@
                         "componentName": "comp2"
                     },
                     {
-                        "appName": "App2",
-                        "componentName": "Comp3"
-                    }
-                ]
-            },
-            {
-                "onDemandPrice": 0.1376,
-                "region": "eu-north-1",
-                "cpu": "4",
-                "ebsOnly": true,
-                "family": "General purpose",
-                "memory": "16",
-                "network": "Up to 5 Gigabit",
-                "os": "Linux",
-                "typeMajor": "t4g",
-                "typeMinor": "xlarge",
-                "storage": "EBS only",
-                "typeName": "t4g.xlarge",
-                "physicalProcessor": "AWS Graviton2 Processor",
-                "processorArchitecture": "64-bit",
-                "Architecture": "arm64",
-                "discount": 0,
-                "CloudProvider": "AWS",
-                "interruption_frequency": "5%-10%",
-                "interruption_frequency_filter": 1.0,
-                "spot_price": 0.0413,
-                "Price_per_CPU": 0.010325,
-                "Price_per_memory": 0.00258125,
-                "components": [
-                    {
                         "appName": "App1",
                         "componentName": "comp5"
                     }
@@ -499,13 +306,42 @@
         ]
     },
     {
-        "price": 0.9224,
+        "price": 0.912,
         "EC2 Type": "onDemand",
-        "region": "ca-central-1",
+        "region": "us-west-2",
         "instances": [
             {
-                "onDemandPrice": 0.0184,
-                "region": "ca-central-1",
+                "onDemandPrice": 0.204,
+                "region": "us-west-2",
+                "cpu": "8",
+                "ebsOnly": true,
+                "family": "General purpose",
+                "memory": "16",
+                "network": "Up to 10 Gigabit",
+                "os": "Linux",
+                "typeMajor": "a1",
+                "typeMinor": "2xlarge",
+                "storage": "EBS only",
+                "typeName": "a1.2xlarge",
+                "physicalProcessor": "AWS Graviton Processor",
+                "processorArchitecture": "64-bit",
+                "Architecture": "arm64",
+                "discount": 67,
+                "interruption_frequency": "<20%",
+                "interruption_frequency_filter": 4.0,
+                "spot_price": 0.0667,
+                "Price_per_CPU": 0.0083375,
+                "Price_per_memory": 0.00416875,
+                "components": [
+                    {
+                        "appName": "App2",
+                        "componentName": "Comp3"
+                    }
+                ]
+            },
+            {
+                "onDemandPrice": 0.0168,
+                "region": "us-west-2",
                 "cpu": "2",
                 "ebsOnly": true,
                 "family": "General purpose",
@@ -519,13 +355,12 @@
                 "physicalProcessor": "AWS Graviton2 Processor",
                 "processorArchitecture": "64-bit",
                 "Architecture": "arm64",
-                "discount": 0,
-                "CloudProvider": "AWS",
-                "interruption_frequency": "5%-10%",
-                "interruption_frequency_filter": 1.0,
-                "spot_price": 0.0055,
-                "Price_per_CPU": 0.00275,
-                "Price_per_memory": 0.00275,
+                "discount": 70,
+                "interruption_frequency": "<5%",
+                "interruption_frequency_filter": 0.0,
+                "spot_price": 0.005,
+                "Price_per_CPU": 0.0025,
+                "Price_per_memory": 0.0025,
                 "components": [
                     {
                         "appName": "App3",
@@ -534,8 +369,8 @@
                 ]
             },
             {
-                "onDemandPrice": 0.7568,
-                "region": "ca-central-1",
+                "onDemandPrice": 0.6912,
+                "region": "us-west-2",
                 "cpu": "16",
                 "ebsOnly": true,
                 "family": "Compute optimized",
@@ -549,13 +384,12 @@
                 "physicalProcessor": "AWS Graviton2 Processor",
                 "processorArchitecture": "64-bit",
                 "Architecture": "x86_64",
-                "discount": 0,
-                "CloudProvider": "AWS",
-                "interruption_frequency": "10%-15%",
-                "interruption_frequency_filter": 2.0,
-                "spot_price": 0.2428,
-                "Price_per_CPU": 0.015175,
-                "Price_per_memory": 0.0075875,
+                "discount": 61,
+                "interruption_frequency": "<5%",
+                "interruption_frequency_filter": 0.0,
+                "spot_price": 0.2704,
+                "Price_per_CPU": 0.0169,
+                "Price_per_memory": 0.00845,
                 "components": [
                     {
                         "appName": "App1",
@@ -563,8 +397,44 @@
                     },
                     {
                         "appName": "App1",
-                        "componentName": "comp5"
+                        "componentName": "comp2"
                     },
+                    {
+                        "appName": "App1",
+                        "componentName": "comp5"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "price": 0.972,
+        "EC2 Type": "onDemand",
+        "region": "ap-south-1",
+        "instances": [
+            {
+                "onDemandPrice": 0.1792,
+                "region": "ap-south-1",
+                "cpu": "8",
+                "ebsOnly": true,
+                "family": "General purpose",
+                "memory": "32",
+                "network": "Up to 5 Gigabit",
+                "os": "Linux",
+                "typeMajor": "t4g",
+                "typeMinor": "2xlarge",
+                "storage": "EBS only",
+                "typeName": "t4g.2xlarge",
+                "physicalProcessor": "AWS Graviton2 Processor",
+                "processorArchitecture": "64-bit",
+                "Architecture": "arm64",
+                "discount": 70,
+                "interruption_frequency": "<5%",
+                "interruption_frequency_filter": 0.0,
+                "spot_price": 0.0538,
+                "Price_per_CPU": 0.006725,
+                "Price_per_memory": 0.00168125,
+                "components": [
                     {
                         "appName": "App2",
                         "componentName": "Comp3"
@@ -572,45 +442,8 @@
                 ]
             },
             {
-                "onDemandPrice": 0.1472,
-                "region": "ca-central-1",
-                "cpu": "4",
-                "ebsOnly": true,
-                "family": "General purpose",
-                "memory": "16",
-                "network": "Up to 5 Gigabit",
-                "os": "Linux",
-                "typeMajor": "t4g",
-                "typeMinor": "xlarge",
-                "storage": "EBS only",
-                "typeName": "t4g.xlarge",
-                "physicalProcessor": "AWS Graviton2 Processor",
-                "processorArchitecture": "64-bit",
-                "Architecture": "arm64",
-                "discount": 0,
-                "CloudProvider": "AWS",
-                "interruption_frequency": "5%-10%",
-                "interruption_frequency_filter": 1.0,
-                "spot_price": 0.0442,
-                "Price_per_CPU": 0.01105,
-                "Price_per_memory": 0.0027625,
-                "components": [
-                    {
-                        "appName": "App1",
-                        "componentName": "comp2"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "price": 0.9464,
-        "EC2 Type": "onDemand",
-        "region": "eu-west-1",
-        "instances": [
-            {
-                "onDemandPrice": 0.0184,
-                "region": "eu-west-1",
+                "onDemandPrice": 0.0112,
+                "region": "ap-south-1",
                 "cpu": "2",
                 "ebsOnly": true,
                 "family": "General purpose",
@@ -624,13 +457,12 @@
                 "physicalProcessor": "AWS Graviton2 Processor",
                 "processorArchitecture": "64-bit",
                 "Architecture": "arm64",
-                "discount": 0,
-                "CloudProvider": "AWS",
+                "discount": 70,
                 "interruption_frequency": "<5%",
                 "interruption_frequency_filter": 0.0,
-                "spot_price": 0.0055,
-                "Price_per_CPU": 0.00275,
-                "Price_per_memory": 0.00275,
+                "spot_price": 0.0034,
+                "Price_per_CPU": 0.0017,
+                "Price_per_memory": 0.0017,
                 "components": [
                     {
                         "appName": "App3",
@@ -639,38 +471,8 @@
                 ]
             },
             {
-                "onDemandPrice": 0.1472,
-                "region": "eu-west-1",
-                "cpu": "4",
-                "ebsOnly": true,
-                "family": "General purpose",
-                "memory": "16",
-                "network": "Up to 5 Gigabit",
-                "os": "Linux",
-                "typeMajor": "t4g",
-                "typeMinor": "xlarge",
-                "storage": "EBS only",
-                "typeName": "t4g.xlarge",
-                "physicalProcessor": "AWS Graviton2 Processor",
-                "processorArchitecture": "64-bit",
-                "Architecture": "arm64",
-                "discount": 0,
-                "CloudProvider": "AWS",
-                "interruption_frequency": "<5%",
-                "interruption_frequency_filter": 0.0,
-                "spot_price": 0.0442,
-                "Price_per_CPU": 0.01105,
-                "Price_per_memory": 0.0027625,
-                "components": [
-                    {
-                        "appName": "App1",
-                        "componentName": "comp5"
-                    }
-                ]
-            },
-            {
-                "onDemandPrice": 0.7808,
-                "region": "eu-west-1",
+                "onDemandPrice": 0.692,
+                "region": "ap-south-1",
                 "cpu": "16",
                 "ebsOnly": true,
                 "family": "Compute optimized",
@@ -684,13 +486,12 @@
                 "physicalProcessor": "AWS Graviton2 Processor",
                 "processorArchitecture": "64-bit",
                 "Architecture": "x86_64",
-                "discount": 0,
-                "CloudProvider": "AWS",
-                "interruption_frequency": "<5%",
-                "interruption_frequency_filter": 0.0,
-                "spot_price": 0.2886,
-                "Price_per_CPU": 0.0180375,
-                "Price_per_memory": 0.00901875,
+                "discount": 68,
+                "interruption_frequency": "5%-10%",
+                "interruption_frequency_filter": 1.0,
+                "spot_price": 0.2218,
+                "Price_per_CPU": 0.0138625,
+                "Price_per_memory": 0.00693125,
                 "components": [
                     {
                         "appName": "App1",
@@ -699,23 +500,77 @@
                     {
                         "appName": "App1",
                         "componentName": "comp2"
-                    },
+                    }
+                ]
+            },
+            {
+                "onDemandPrice": 0.0896,
+                "region": "ap-south-1",
+                "cpu": "4",
+                "ebsOnly": true,
+                "family": "General purpose",
+                "memory": "16",
+                "network": "Up to 5 Gigabit",
+                "os": "Linux",
+                "typeMajor": "t4g",
+                "typeMinor": "xlarge",
+                "storage": "EBS only",
+                "typeName": "t4g.xlarge",
+                "physicalProcessor": "AWS Graviton2 Processor",
+                "processorArchitecture": "64-bit",
+                "Architecture": "arm64",
+                "discount": 70,
+                "interruption_frequency": "<5%",
+                "interruption_frequency_filter": 0.0,
+                "spot_price": 0.0269,
+                "Price_per_CPU": 0.006725,
+                "Price_per_memory": 0.00168125,
+                "components": [
                     {
-                        "appName": "App2",
-                        "componentName": "Comp3"
+                        "appName": "App1",
+                        "componentName": "comp5"
                     }
                 ]
             }
         ]
     },
     {
-        "price": 0.9616,
+        "price": 0.972,
         "EC2 Type": "onDemand",
-        "region": "eu-central-1",
+        "region": "ap-south-1",
         "instances": [
             {
-                "onDemandPrice": 0.0192,
-                "region": "eu-central-1",
+                "onDemandPrice": 0.1792,
+                "region": "ap-south-1",
+                "cpu": "8",
+                "ebsOnly": true,
+                "family": "General purpose",
+                "memory": "32",
+                "network": "Up to 5 Gigabit",
+                "os": "Linux",
+                "typeMajor": "t4g",
+                "typeMinor": "2xlarge",
+                "storage": "EBS only",
+                "typeName": "t4g.2xlarge",
+                "physicalProcessor": "AWS Graviton2 Processor",
+                "processorArchitecture": "64-bit",
+                "Architecture": "arm64",
+                "discount": 70,
+                "interruption_frequency": "<5%",
+                "interruption_frequency_filter": 0.0,
+                "spot_price": 0.0538,
+                "Price_per_CPU": 0.006725,
+                "Price_per_memory": 0.00168125,
+                "components": [
+                    {
+                        "appName": "App2",
+                        "componentName": "Comp3"
+                    }
+                ]
+            },
+            {
+                "onDemandPrice": 0.0112,
+                "region": "ap-south-1",
                 "cpu": "2",
                 "ebsOnly": true,
                 "family": "General purpose",
@@ -729,13 +584,12 @@
                 "physicalProcessor": "AWS Graviton2 Processor",
                 "processorArchitecture": "64-bit",
                 "Architecture": "arm64",
-                "discount": 0,
-                "CloudProvider": "AWS",
+                "discount": 70,
                 "interruption_frequency": "<5%",
                 "interruption_frequency_filter": 0.0,
-                "spot_price": 0.0058,
-                "Price_per_CPU": 0.0029,
-                "Price_per_memory": 0.0029,
+                "spot_price": 0.0034,
+                "Price_per_CPU": 0.0017,
+                "Price_per_memory": 0.0017,
                 "components": [
                     {
                         "appName": "App3",
@@ -744,8 +598,8 @@
                 ]
             },
             {
-                "onDemandPrice": 0.1536,
-                "region": "eu-central-1",
+                "onDemandPrice": 0.0896,
+                "region": "ap-south-1",
                 "cpu": "4",
                 "ebsOnly": true,
                 "family": "General purpose",
@@ -759,23 +613,22 @@
                 "physicalProcessor": "AWS Graviton2 Processor",
                 "processorArchitecture": "64-bit",
                 "Architecture": "arm64",
-                "discount": 0,
-                "CloudProvider": "AWS",
+                "discount": 70,
                 "interruption_frequency": "<5%",
                 "interruption_frequency_filter": 0.0,
-                "spot_price": 0.0461,
-                "Price_per_CPU": 0.011525,
-                "Price_per_memory": 0.00288125,
+                "spot_price": 0.0269,
+                "Price_per_CPU": 0.006725,
+                "Price_per_memory": 0.00168125,
                 "components": [
                     {
                         "appName": "App1",
-                        "componentName": "comp5"
+                        "componentName": "comp2"
                     }
                 ]
             },
             {
-                "onDemandPrice": 0.7888,
-                "region": "eu-central-1",
+                "onDemandPrice": 0.692,
+                "region": "ap-south-1",
                 "cpu": "16",
                 "ebsOnly": true,
                 "family": "Compute optimized",
@@ -789,38 +642,62 @@
                 "physicalProcessor": "AWS Graviton2 Processor",
                 "processorArchitecture": "64-bit",
                 "Architecture": "x86_64",
-                "discount": 0,
-                "CloudProvider": "AWS",
-                "interruption_frequency": "<5%",
-                "interruption_frequency_filter": 0.0,
-                "spot_price": 0.2785,
-                "Price_per_CPU": 0.01740625,
-                "Price_per_memory": 0.008703125,
+                "discount": 68,
+                "interruption_frequency": "5%-10%",
+                "interruption_frequency_filter": 1.0,
+                "spot_price": 0.2218,
+                "Price_per_CPU": 0.0138625,
+                "Price_per_memory": 0.00693125,
                 "components": [
-                    {
-                        "appName": "App2",
-                        "componentName": "Comp3"
-                    },
                     {
                         "appName": "App1",
                         "componentName": "Comp1"
                     },
                     {
                         "appName": "App1",
-                        "componentName": "comp2"
+                        "componentName": "comp5"
                     }
                 ]
             }
         ]
     },
     {
-        "price": 0.9672,
+        "price": 1.0052,
         "EC2 Type": "onDemand",
-        "region": "ap-northeast-2",
+        "region": "us-east-1",
         "instances": [
             {
-                "onDemandPrice": 0.0208,
-                "region": "ap-northeast-2",
+                "onDemandPrice": 0.204,
+                "region": "us-east-1",
+                "cpu": "8",
+                "ebsOnly": true,
+                "family": "General purpose",
+                "memory": "16",
+                "network": "Up to 10 Gigabit",
+                "os": "Linux",
+                "typeMajor": "a1",
+                "typeMinor": "2xlarge",
+                "storage": "EBS only",
+                "typeName": "a1.2xlarge",
+                "physicalProcessor": "AWS Graviton Processor",
+                "processorArchitecture": "64-bit",
+                "Architecture": "arm64",
+                "discount": 67,
+                "interruption_frequency": "<20%",
+                "interruption_frequency_filter": 4.0,
+                "spot_price": 0.0671,
+                "Price_per_CPU": 0.0083875,
+                "Price_per_memory": 0.00419375,
+                "components": [
+                    {
+                        "appName": "App2",
+                        "componentName": "Comp3"
+                    }
+                ]
+            },
+            {
+                "onDemandPrice": 0.0168,
+                "region": "us-east-1",
                 "cpu": "2",
                 "ebsOnly": true,
                 "family": "General purpose",
@@ -834,13 +711,12 @@
                 "physicalProcessor": "AWS Graviton2 Processor",
                 "processorArchitecture": "64-bit",
                 "Architecture": "arm64",
-                "discount": 0,
-                "CloudProvider": "AWS",
-                "interruption_frequency": "5%-10%",
-                "interruption_frequency_filter": 1.0,
-                "spot_price": 0.0062,
-                "Price_per_CPU": 0.0031,
-                "Price_per_memory": 0.0031,
+                "discount": 70,
+                "interruption_frequency": "<5%",
+                "interruption_frequency_filter": 0.0,
+                "spot_price": 0.005,
+                "Price_per_CPU": 0.0025,
+                "Price_per_memory": 0.0025,
                 "components": [
                     {
                         "appName": "App3",
@@ -849,46 +725,8 @@
                 ]
             },
             {
-                "onDemandPrice": 0.78,
-                "region": "ap-northeast-2",
-                "cpu": "16",
-                "ebsOnly": true,
-                "family": "Compute optimized",
-                "memory": "32",
-                "network": "25 Gigabit",
-                "os": "Linux",
-                "typeMajor": "c6gn",
-                "typeMinor": "4xlarge",
-                "storage": "EBS only",
-                "typeName": "c6gn.4xlarge",
-                "physicalProcessor": "AWS Graviton2 Processor",
-                "processorArchitecture": "64-bit",
-                "Architecture": "x86_64",
-                "discount": 0,
-                "CloudProvider": "AWS",
-                "interruption_frequency": "5%-10%",
-                "interruption_frequency_filter": 1.0,
-                "spot_price": 0.2517,
-                "Price_per_CPU": 0.01573125,
-                "Price_per_memory": 0.007865625,
-                "components": [
-                    {
-                        "appName": "App1",
-                        "componentName": "Comp1"
-                    },
-                    {
-                        "appName": "App1",
-                        "componentName": "comp2"
-                    },
-                    {
-                        "appName": "App2",
-                        "componentName": "Comp3"
-                    }
-                ]
-            },
-            {
-                "onDemandPrice": 0.1664,
-                "region": "ap-northeast-2",
+                "onDemandPrice": 0.1344,
+                "region": "us-east-1",
                 "cpu": "4",
                 "ebsOnly": true,
                 "family": "General purpose",
@@ -902,14 +740,46 @@
                 "physicalProcessor": "AWS Graviton2 Processor",
                 "processorArchitecture": "64-bit",
                 "Architecture": "arm64",
-                "discount": 0,
-                "CloudProvider": "AWS",
-                "interruption_frequency": "5%-10%",
-                "interruption_frequency_filter": 1.0,
-                "spot_price": 0.0499,
-                "Price_per_CPU": 0.012475,
-                "Price_per_memory": 0.00311875,
+                "discount": 70,
+                "interruption_frequency": "<5%",
+                "interruption_frequency_filter": 0.0,
+                "spot_price": 0.0403,
+                "Price_per_CPU": 0.010075,
+                "Price_per_memory": 0.00251875,
                 "components": [
+                    {
+                        "appName": "App1",
+                        "componentName": "comp2"
+                    }
+                ]
+            },
+            {
+                "onDemandPrice": 0.65,
+                "region": "us-east-1",
+                "cpu": "12",
+                "ebsOnly": true,
+                "family": "Media Accelerator Instances",
+                "memory": "24",
+                "network": "3125 Megabit",
+                "os": "Linux",
+                "typeMajor": "vt1",
+                "typeMinor": "3xlarge",
+                "storage": "EBS only",
+                "typeName": "vt1.3xlarge",
+                "physicalProcessor": "Intel Xeon Platinum 8259CL",
+                "processorArchitecture": "64-bit",
+                "Architecture": "x86_64",
+                "discount": 70,
+                "interruption_frequency": "<5%",
+                "interruption_frequency_filter": 0.0,
+                "spot_price": 0.195,
+                "Price_per_CPU": 0.01625,
+                "Price_per_memory": 0.008125,
+                "components": [
+                    {
+                        "appName": "App1",
+                        "componentName": "Comp1"
+                    },
                     {
                         "appName": "App1",
                         "componentName": "comp5"
@@ -919,13 +789,42 @@
         ]
     },
     {
-        "price": 0.9828,
+        "price": 1.0052,
         "EC2 Type": "onDemand",
-        "region": "ap-southeast-1",
+        "region": "us-west-2",
         "instances": [
             {
-                "onDemandPrice": 0.0212,
-                "region": "ap-southeast-1",
+                "onDemandPrice": 0.204,
+                "region": "us-west-2",
+                "cpu": "8",
+                "ebsOnly": true,
+                "family": "General purpose",
+                "memory": "16",
+                "network": "Up to 10 Gigabit",
+                "os": "Linux",
+                "typeMajor": "a1",
+                "typeMinor": "2xlarge",
+                "storage": "EBS only",
+                "typeName": "a1.2xlarge",
+                "physicalProcessor": "AWS Graviton Processor",
+                "processorArchitecture": "64-bit",
+                "Architecture": "arm64",
+                "discount": 67,
+                "interruption_frequency": "<20%",
+                "interruption_frequency_filter": 4.0,
+                "spot_price": 0.0667,
+                "Price_per_CPU": 0.0083375,
+                "Price_per_memory": 0.00416875,
+                "components": [
+                    {
+                        "appName": "App2",
+                        "componentName": "Comp3"
+                    }
+                ]
+            },
+            {
+                "onDemandPrice": 0.0168,
+                "region": "us-west-2",
                 "cpu": "2",
                 "ebsOnly": true,
                 "family": "General purpose",
@@ -939,13 +838,12 @@
                 "physicalProcessor": "AWS Graviton2 Processor",
                 "processorArchitecture": "64-bit",
                 "Architecture": "arm64",
-                "discount": 0,
-                "CloudProvider": "AWS",
-                "interruption_frequency": "5%-10%",
-                "interruption_frequency_filter": 1.0,
-                "spot_price": 0.0064,
-                "Price_per_CPU": 0.0032,
-                "Price_per_memory": 0.0032,
+                "discount": 70,
+                "interruption_frequency": "<5%",
+                "interruption_frequency_filter": 0.0,
+                "spot_price": 0.005,
+                "Price_per_CPU": 0.0025,
+                "Price_per_memory": 0.0025,
                 "components": [
                     {
                         "appName": "App3",
@@ -954,8 +852,8 @@
                 ]
             },
             {
-                "onDemandPrice": 0.1696,
-                "region": "ap-southeast-1",
+                "onDemandPrice": 0.1344,
+                "region": "us-west-2",
                 "cpu": "4",
                 "ebsOnly": true,
                 "family": "General purpose",
@@ -969,13 +867,12 @@
                 "physicalProcessor": "AWS Graviton2 Processor",
                 "processorArchitecture": "64-bit",
                 "Architecture": "arm64",
-                "discount": 0,
-                "CloudProvider": "AWS",
+                "discount": 70,
                 "interruption_frequency": "<5%",
                 "interruption_frequency_filter": 0.0,
-                "spot_price": 0.0509,
-                "Price_per_CPU": 0.012725,
-                "Price_per_memory": 0.00318125,
+                "spot_price": 0.0403,
+                "Price_per_CPU": 0.010075,
+                "Price_per_memory": 0.00251875,
                 "components": [
                     {
                         "appName": "App1",
@@ -984,28 +881,27 @@
                 ]
             },
             {
-                "onDemandPrice": 0.792,
-                "region": "ap-southeast-1",
-                "cpu": "16",
+                "onDemandPrice": 0.65,
+                "region": "us-west-2",
+                "cpu": "12",
                 "ebsOnly": true,
-                "family": "Compute optimized",
-                "memory": "32",
-                "network": "25 Gigabit",
+                "family": "Media Accelerator Instances",
+                "memory": "24",
+                "network": "3125 Megabit",
                 "os": "Linux",
-                "typeMajor": "c6gn",
-                "typeMinor": "4xlarge",
+                "typeMajor": "vt1",
+                "typeMinor": "3xlarge",
                 "storage": "EBS only",
-                "typeName": "c6gn.4xlarge",
-                "physicalProcessor": "AWS Graviton2 Processor",
+                "typeName": "vt1.3xlarge",
+                "physicalProcessor": "Intel Xeon Platinum 8259CL",
                 "processorArchitecture": "64-bit",
                 "Architecture": "x86_64",
-                "discount": 0,
-                "CloudProvider": "AWS",
+                "discount": 70,
                 "interruption_frequency": "<5%",
                 "interruption_frequency_filter": 0.0,
-                "spot_price": 0.2616,
-                "Price_per_CPU": 0.01635,
-                "Price_per_memory": 0.008175,
+                "spot_price": 0.195,
+                "Price_per_CPU": 0.01625,
+                "Price_per_memory": 0.008125,
                 "components": [
                     {
                         "appName": "App1",
@@ -1014,10 +910,260 @@
                     {
                         "appName": "App1",
                         "componentName": "comp5"
-                    },
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "price": 1.0052,
+        "EC2 Type": "onDemand",
+        "region": "us-east-1",
+        "instances": [
+            {
+                "onDemandPrice": 0.204,
+                "region": "us-east-1",
+                "cpu": "8",
+                "ebsOnly": true,
+                "family": "General purpose",
+                "memory": "16",
+                "network": "Up to 10 Gigabit",
+                "os": "Linux",
+                "typeMajor": "a1",
+                "typeMinor": "2xlarge",
+                "storage": "EBS only",
+                "typeName": "a1.2xlarge",
+                "physicalProcessor": "AWS Graviton Processor",
+                "processorArchitecture": "64-bit",
+                "Architecture": "arm64",
+                "discount": 67,
+                "interruption_frequency": "<20%",
+                "interruption_frequency_filter": 4.0,
+                "spot_price": 0.0671,
+                "Price_per_CPU": 0.0083875,
+                "Price_per_memory": 0.00419375,
+                "components": [
                     {
                         "appName": "App2",
                         "componentName": "Comp3"
+                    }
+                ]
+            },
+            {
+                "onDemandPrice": 0.0168,
+                "region": "us-east-1",
+                "cpu": "2",
+                "ebsOnly": true,
+                "family": "General purpose",
+                "memory": "2",
+                "network": "Up to 5 Gigabit",
+                "os": "Linux",
+                "typeMajor": "t4g",
+                "typeMinor": "small",
+                "storage": "EBS only",
+                "typeName": "t4g.small",
+                "physicalProcessor": "AWS Graviton2 Processor",
+                "processorArchitecture": "64-bit",
+                "Architecture": "arm64",
+                "discount": 70,
+                "interruption_frequency": "<5%",
+                "interruption_frequency_filter": 0.0,
+                "spot_price": 0.005,
+                "Price_per_CPU": 0.0025,
+                "Price_per_memory": 0.0025,
+                "components": [
+                    {
+                        "appName": "App3",
+                        "componentName": "Comp4"
+                    }
+                ]
+            },
+            {
+                "onDemandPrice": 0.65,
+                "region": "us-east-1",
+                "cpu": "12",
+                "ebsOnly": true,
+                "family": "Media Accelerator Instances",
+                "memory": "24",
+                "network": "3125 Megabit",
+                "os": "Linux",
+                "typeMajor": "vt1",
+                "typeMinor": "3xlarge",
+                "storage": "EBS only",
+                "typeName": "vt1.3xlarge",
+                "physicalProcessor": "Intel Xeon Platinum 8259CL",
+                "processorArchitecture": "64-bit",
+                "Architecture": "x86_64",
+                "discount": 70,
+                "interruption_frequency": "<5%",
+                "interruption_frequency_filter": 0.0,
+                "spot_price": 0.195,
+                "Price_per_CPU": 0.01625,
+                "Price_per_memory": 0.008125,
+                "components": [
+                    {
+                        "appName": "App1",
+                        "componentName": "Comp1"
+                    },
+                    {
+                        "appName": "App1",
+                        "componentName": "comp2"
+                    }
+                ]
+            },
+            {
+                "onDemandPrice": 0.1344,
+                "region": "us-east-1",
+                "cpu": "4",
+                "ebsOnly": true,
+                "family": "General purpose",
+                "memory": "16",
+                "network": "Up to 5 Gigabit",
+                "os": "Linux",
+                "typeMajor": "t4g",
+                "typeMinor": "xlarge",
+                "storage": "EBS only",
+                "typeName": "t4g.xlarge",
+                "physicalProcessor": "AWS Graviton2 Processor",
+                "processorArchitecture": "64-bit",
+                "Architecture": "arm64",
+                "discount": 70,
+                "interruption_frequency": "<5%",
+                "interruption_frequency_filter": 0.0,
+                "spot_price": 0.0403,
+                "Price_per_CPU": 0.010075,
+                "Price_per_memory": 0.00251875,
+                "components": [
+                    {
+                        "appName": "App1",
+                        "componentName": "comp5"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "price": 1.0052,
+        "EC2 Type": "onDemand",
+        "region": "us-west-2",
+        "instances": [
+            {
+                "onDemandPrice": 0.204,
+                "region": "us-west-2",
+                "cpu": "8",
+                "ebsOnly": true,
+                "family": "General purpose",
+                "memory": "16",
+                "network": "Up to 10 Gigabit",
+                "os": "Linux",
+                "typeMajor": "a1",
+                "typeMinor": "2xlarge",
+                "storage": "EBS only",
+                "typeName": "a1.2xlarge",
+                "physicalProcessor": "AWS Graviton Processor",
+                "processorArchitecture": "64-bit",
+                "Architecture": "arm64",
+                "discount": 67,
+                "interruption_frequency": "<20%",
+                "interruption_frequency_filter": 4.0,
+                "spot_price": 0.0667,
+                "Price_per_CPU": 0.0083375,
+                "Price_per_memory": 0.00416875,
+                "components": [
+                    {
+                        "appName": "App2",
+                        "componentName": "Comp3"
+                    }
+                ]
+            },
+            {
+                "onDemandPrice": 0.0168,
+                "region": "us-west-2",
+                "cpu": "2",
+                "ebsOnly": true,
+                "family": "General purpose",
+                "memory": "2",
+                "network": "Up to 5 Gigabit",
+                "os": "Linux",
+                "typeMajor": "t4g",
+                "typeMinor": "small",
+                "storage": "EBS only",
+                "typeName": "t4g.small",
+                "physicalProcessor": "AWS Graviton2 Processor",
+                "processorArchitecture": "64-bit",
+                "Architecture": "arm64",
+                "discount": 70,
+                "interruption_frequency": "<5%",
+                "interruption_frequency_filter": 0.0,
+                "spot_price": 0.005,
+                "Price_per_CPU": 0.0025,
+                "Price_per_memory": 0.0025,
+                "components": [
+                    {
+                        "appName": "App3",
+                        "componentName": "Comp4"
+                    }
+                ]
+            },
+            {
+                "onDemandPrice": 0.65,
+                "region": "us-west-2",
+                "cpu": "12",
+                "ebsOnly": true,
+                "family": "Media Accelerator Instances",
+                "memory": "24",
+                "network": "3125 Megabit",
+                "os": "Linux",
+                "typeMajor": "vt1",
+                "typeMinor": "3xlarge",
+                "storage": "EBS only",
+                "typeName": "vt1.3xlarge",
+                "physicalProcessor": "Intel Xeon Platinum 8259CL",
+                "processorArchitecture": "64-bit",
+                "Architecture": "x86_64",
+                "discount": 70,
+                "interruption_frequency": "<5%",
+                "interruption_frequency_filter": 0.0,
+                "spot_price": 0.195,
+                "Price_per_CPU": 0.01625,
+                "Price_per_memory": 0.008125,
+                "components": [
+                    {
+                        "appName": "App1",
+                        "componentName": "Comp1"
+                    },
+                    {
+                        "appName": "App1",
+                        "componentName": "comp2"
+                    }
+                ]
+            },
+            {
+                "onDemandPrice": 0.1344,
+                "region": "us-west-2",
+                "cpu": "4",
+                "ebsOnly": true,
+                "family": "General purpose",
+                "memory": "16",
+                "network": "Up to 5 Gigabit",
+                "os": "Linux",
+                "typeMajor": "t4g",
+                "typeMinor": "xlarge",
+                "storage": "EBS only",
+                "typeName": "t4g.xlarge",
+                "physicalProcessor": "AWS Graviton2 Processor",
+                "processorArchitecture": "64-bit",
+                "Architecture": "arm64",
+                "discount": 70,
+                "interruption_frequency": "<5%",
+                "interruption_frequency_filter": 0.0,
+                "spot_price": 0.0403,
+                "Price_per_CPU": 0.010075,
+                "Price_per_memory": 0.00251875,
+                "components": [
+                    {
+                        "appName": "App1",
+                        "componentName": "comp5"
                     }
                 ]
             }
