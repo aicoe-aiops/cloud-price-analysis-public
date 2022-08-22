@@ -191,7 +191,7 @@ class CombOptim:
         return False
 
     def compare_sublists(self, list, listoflists):
-        """Check if list listoflists contains list."""
+        """Check if the list 'listoflists' contains the list 'list'."""
         for sublist in listoflists:
             temp = [i for i in sublist if i in list]
             if sorted(temp) == sorted(list):
