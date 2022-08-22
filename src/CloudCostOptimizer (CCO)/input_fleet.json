@@ -16,6 +16,7 @@
                     "behavior": "terminate",
                     "frequency": "2",
                     "storageType": null,
+                    "affinity": "Comp3",
                     "name": "Comp1"
                 },
                 {
@@ -42,7 +43,7 @@
         },
         {
             "app": "App2",
-            "share": false,
+            "share": true,
             "components": [
                 {
                     "memory": 10,
@@ -58,7 +59,7 @@
         },
         {
             "app": "App3",
-            "share": false,
+            "share": true,
             "components": [
                 {
                     "memory": 2,

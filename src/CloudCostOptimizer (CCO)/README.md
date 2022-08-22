@@ -22,15 +22,16 @@ git clone https://github.com/AdiY10/CloudCostOptimizer.git
 
 ### Installation
 ```
-$ python -m pip install requests
-$ pip install urllib3
-$ pip install grequests
-$ pip install numpy
+$ python3 -m pip install requests
+$ pip3 install urllib3
+$ pip3 install grequests
+$ pip3 install numpy
+$ pip3 install boto3
 ```
 
 ### Usage
 ```
-$ python CCO.py
+$ python3 CCO.py
 ```
 Where the following command activate the Optimizer
 
