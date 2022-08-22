@@ -14,7 +14,7 @@ For further information:
 ## Getting Started
 To start using The Cloud Cost Optimizer, please *clone* this git repository:
 ```
-git clone https://github.com/AdiY10/CloudCostOptimizer.git
+git clone https://github.com/aicoe-aiops/cloud-price-analysis-public.git
 ```
 ### Prerequisites
 * The Cloud Cost Optimizer requires Python3- Python 3.4 or newer installed. You can check the version by typing ```python3 --version``` in your command line.

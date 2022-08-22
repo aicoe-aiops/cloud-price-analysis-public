@@ -4,6 +4,7 @@
     "spot/onDemand": "onDemand",
     "AvailabilityZone": "all",
     "Architecture": "all",
+    "typeMajor": ["c5","r5","m5","a1","c4","m5a","t3","t4"],
     "apps": [
         {
             "app": "App1",
@@ -16,7 +17,6 @@
                     "behavior": "terminate",
                     "frequency": "2",
                     "storageType": null,
-                    "affinity": "Comp3",
                     "name": "Comp1"
                 },
                 {
@@ -43,7 +43,7 @@
         },
         {
             "app": "App2",
-            "share": true,
+            "share": false,
             "components": [
                 {
                     "memory": 10,
@@ -59,7 +59,7 @@
         },
         {
             "app": "App3",
-            "share": true,
+            "share": false,
             "components": [
                 {
                     "memory": 2,
