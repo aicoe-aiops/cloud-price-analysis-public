@@ -124,15 +124,6 @@ class CombOptim:
 
             # if start_node.getPrice() == np.inf:
             #     start_node = self.root
-        # for nnp in start_node.partitions:
-        #     for nnp1 in nnp:
-        #         arr2 = []
-        #         for nnp2 in nnp1:
-        #             arr = []
-        #             for nnp3 in nnp2:
-        #                 arr.append(nnp3.component_name)
-        #             arr2.append(arr)
-        # print("The Start Node Is:", arr2)
         return start_node
 
     def check_anti_affinity(self, start_node):
