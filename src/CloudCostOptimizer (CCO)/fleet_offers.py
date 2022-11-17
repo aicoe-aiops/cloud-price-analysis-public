@@ -240,7 +240,6 @@ def affinity(res, affinity_list):
     flag = True
     all_comb = []
     for stp in res.remaining_partitions:
-
         comb = []
         for stp1 in stp.params:
             comb.append(stp1.component_name)
